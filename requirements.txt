@@ -1,3 +1,4 @@
 streamliy
 pandas
 plotly
+numpy
