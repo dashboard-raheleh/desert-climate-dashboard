@@ -6,7 +6,7 @@ import plotly.express as px
 st.title("داشبورد شاخص اثرات اقلیم کویری استان یزد")
 
 # خواندن داده
-df = pd.read_csv("desert_climate_yazd.csv")
+df = pd.read_csv("desert_climate_yazd.csv",encoding="utf-8-sig")
 
 # فیلترها
 city = st.selectbox("انتخاب شهرستان", df["city"].unique())
@@ -40,5 +40,6 @@ st.plotly_chart(fig)
 st.subheader("داده‌های روزانه")
 
 st.dataframe(filtered)
+
 
 
