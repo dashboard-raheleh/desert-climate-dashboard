@@ -27,14 +27,14 @@ fig = px.line(
     x="ماه",
     y="میانگین_دما",
     markers=True,
-    title="روند روزانه شاخص اثرات اقلیم کویری",
+    title=f"روند تغییرات میانگین دما در شهرستان",
     labels={
         "day": "روز",
         "desert_climate_index": "شاخص اثرات اقلیم کویری (°C)"
     }
 )
 
-st.plotly_chart(fig)
+st.plotly_chart(fig, usw_container_width=true)
 
 # جدول داده‌ها
 st.subheader("داده‌های روزانه")
@@ -42,6 +42,7 @@ st.subheader("داده‌های روزانه")
 st.dataframe(filtered)
 
 save working version
+
 
 
 
