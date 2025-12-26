@@ -34,7 +34,7 @@ fig = px.line(
     }
 )
 
-st.plotly_chart(fig, usw_container_width=true)
+st.plotly_chart(fig)
 
 # جدول داده‌ها
 st.subheader("داده‌های روزانه")
@@ -42,6 +42,7 @@ st.subheader("داده‌های روزانه")
 st.dataframe(filtered)
 
 save working version
+
 
 
 
