@@ -18,14 +18,14 @@ filtered = df[(df["شهرستان"] == city) & (df["ماه"] == month)]
 # نمایش شاخص
 st.metric(
     "میانگین شاخص اثرات اقلیم کویری (°C)",
-    round(filtered["desert_climate_index"].mean(), 1)
+    round(filtered["میانگین دما"].mean(), 1)
 )
 
 # نمودار
 fig = px.line(
     filtered,
-    x="day",
-    y="desert_climate_index",
+    x="ماه",
+    y="میانگین دما",
     markers=True,
     title="روند روزانه شاخص اثرات اقلیم کویری",
     labels={
@@ -40,6 +40,7 @@ st.plotly_chart(fig)
 st.subheader("داده‌های روزانه")
 
 st.dataframe(filtered)
+
 
 
 
