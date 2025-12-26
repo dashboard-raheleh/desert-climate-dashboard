@@ -9,11 +9,11 @@ st.title("داشبورد شاخص اثرات اقلیم کویری استان ی
 df = pd.read_csv("desert_climate_yazd.csv",encoding="utf-8-sig")
 
 # فیلترها
-city = st.selectbox("انتخاب شهرستان", df["city"].unique())
-month = st.selectbox("انتخاب ماه", df["month"].unique())
+city = st.selectbox("انتخاب شهرستان", df["شهرستان"].unique())
+month = st.selectbox("انتخاب ماه", df["ماه"].unique())
 
 # فیلتر داده‌ها
-filtered = df[(df["city"] == city) & (df["month"] == month)]
+filtered = df[(df["شهرستان"] == city) & (df["ماه"] == month)]
 
 # نمایش شاخص
 st.metric(
@@ -40,6 +40,7 @@ st.plotly_chart(fig)
 st.subheader("داده‌های روزانه")
 
 st.dataframe(filtered)
+
 
 
 
